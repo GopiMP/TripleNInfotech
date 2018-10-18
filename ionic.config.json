@@ -1,0 +1,7 @@
+{
+  "name": "TripleNInfotech",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

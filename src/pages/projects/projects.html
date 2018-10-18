@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>projects</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of domainList">
+   <ion-item (click)="goToProjectList(item.title)">
+     <ion-avatar item-start>
+      <img src="{{item.image}}" alt="Image">
+     </ion-avatar>
+     <h2>{{item.title}}</h2>
+     <p>{{item.description}}</p>
+   </ion-item>
+  </ion-card>
+</ion-content>

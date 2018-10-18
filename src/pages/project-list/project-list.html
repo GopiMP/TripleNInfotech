@@ -1,0 +1,17 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>projectList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of projectList">
+    <ion-card-content (click)="gotoMail(item)">{{item.title}}</ion-card-content>
+    <ion-note>{{item.id}}</ion-note>
+  </ion-card>
+
+</ion-content>
