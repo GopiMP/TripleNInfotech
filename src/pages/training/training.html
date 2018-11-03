@@ -24,7 +24,9 @@
       <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
         <ion-icon item-left name="ios-arrow-forward" *ngIf="!item.open"></ion-icon>
         <ion-icon item-left name="ios-arrow-down" *ngIf="item.open"></ion-icon>
+        
           {{ item.name }}
+          <ion-spinner  name="bubbles" *ngIf="selectedIndex == i && trainingOpen == 0"></ion-spinner>
       </button>
  
       <ion-list *ngIf="item.children && item.open" no-lines>
@@ -34,6 +36,7 @@
           <button ion-item (click)="toggleItem(i, j)" *ngIf="child.children" class="child" detail-none>
             <ion-icon item-left name="add" *ngIf="!child.open"></ion-icon>
             <ion-icon item-left name="close" *ngIf="child.open"></ion-icon>
+           
             {{ child.name }}
           </button>
  

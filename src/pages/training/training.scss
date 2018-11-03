@@ -70,6 +70,15 @@
             border-color: darkolivegreen;
             border-radius: 10px;
         }
+        ion-spinner {
+            position: fixed;
+            top: 10px;
+            left: 0px;
+            right: 10px;
+            bottom: 0px;
+            margin-left: auto;
+            z-index: 9;
+        }
     
     }
     

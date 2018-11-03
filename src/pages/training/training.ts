@@ -10,8 +10,9 @@ import 'rxjs/add/operator/map'
   templateUrl: 'training.html',
 })
 export class TrainingPage {
-
+  trainingOpen:any;
   information: any[];
+  selectedIndex : any;
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
               private http: Http,
@@ -23,7 +24,20 @@ export class TrainingPage {
   }
 
   toggleSection(i) {
-    this.information[i].open = !this.information[i].open;
+    this.trainingOpen = 0;
+    this.selectedIndex = i;
+    if(this.information[i].open){
+      this.trainingOpen = 1;
+      this.information[i].open = !this.information[i].open;
+      
+    }else{
+      setTimeout(() => {
+        this.trainingOpen = 1;
+        this.information[i].open = !this.information[i].open;
+      }, 1000);
+    }
+   
+   
   }
 
   toggleItem(i, j) {
