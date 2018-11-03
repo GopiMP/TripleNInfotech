@@ -1,3 +1,35 @@
 page-home {
+    // .home_background{
+    //    background-color: red;
+    // }
+    .tabs {
+        .tabbar {
+            background-image: inherit;
+            background-color: #77a84b;//#689f38;//#8bc34a;//#618833;//#7cb342;
+            height: 65px;
+        }
+        .tab-button[aria-selected=true] .tab-button-icon {
+            transform: none !important;
+            opacity: 1 !important;
+            color: white;
+        }
+        .tab-button[aria-selected=true] .tab-button-text {
+            transform: none !important;
+            opacity: 1 !important;
+            
+        }
+        .tab-button-icon {
+            opacity: 0.5;
+            font-size: 35px;
+           // color: gray
+           // font-size: 1.1rem;
+        }
+       
+        .tab-button-text {
+            opacity: 0.5;
+            font-size: 1.2rem;
+            color: white;
+        }
+    }
 
 }

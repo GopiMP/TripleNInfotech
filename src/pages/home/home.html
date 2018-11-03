@@ -1,8 +1,10 @@
 
-<ion-content padding>
-  <ion-tabs>
-    <ion-tab [root]="projectPage" tabTitle="Project" tabIcon="home"></ion-tab>
-    <ion-tab [root]="trainingPage" tabTitle="Training" tabIcon="people"></ion-tab>
-    <ion-tab [root]="contactPage" tabTitle="Contact" tabIcon="pin"></ion-tab>
+  <ion-tabs #myTabs (ionChange)="onTabsChange()" [ngClass]="{
+    'home_background':selectedTab == 'Home'
+    }">
+    <ion-tab [root]="aboutPage" tabTitle="Home" tabIcon="ios-home"></ion-tab>
+    <ion-tab [root]="projectPage" tabTitle="Project" tabIcon="ios-bulb"></ion-tab>
+    <ion-tab [root]="trainingPage" tabTitle="Training" tabIcon="ios-people"></ion-tab>
+    <ion-tab [root]="contactPage" tabTitle="Contact" tabIcon="ios-locate"></ion-tab>
   </ion-tabs>
-</ion-content>
+

@@ -2,16 +2,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>projectList</ion-title>
+    <ion-title class="headerTitle">
+      {{project | uppercase}}
+     </ion-title>
+     <ion-buttons end>
+         <button ion-button icon-only style="color: white;">
+           <ion-icon name="options"></ion-icon>
+         </button>
+       </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card *ngFor="let item of projectList">
-    <ion-card-content (click)="gotoMail(item)">{{item.title}}</ion-card-content>
-    <ion-note>{{item.id}}</ion-note>
+<ion-content class="background">
+  <ion-card *ngFor="let item of projectlist" class="projectCard">
+    <ion-card-content (click)="gotoMail(item)" class="missionCardDesc">{{item.title}}</ion-card-content>
+     <ion-note class="note missionCardDesc">{{item.id}}</ion-note>
   </ion-card>
 
 </ion-content>

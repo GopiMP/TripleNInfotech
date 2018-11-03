@@ -1,3 +1,75 @@
-page-training {
-
-}
+	
+	@import '../../style/colors.scss';
+    @import '../../fontgroup/fontStyle.scss';
+    page-training {
+        .accordion-list {
+            //background: color($colors, light);
+            height: auto;
+        }
+        .section {
+            background: #fff;
+            color: #000;
+            margin-bottom: 4px;
+            border-radius: 10px;
+        }
+        .section-active {
+            background: cadetblue;
+            color: #fff;
+           border-radius: 20px 20px 0 0;
+        }
+        .list-header-md{
+            background: none;
+        }
+     
+        .child {
+            background: #e8e7e6;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        .child-item {
+            background: lightyellow;
+            padding: 10px;
+            border-radius: 0 0 20px 20px;
+            height: 90px;
+        }
+        .label {
+            margin: 0px;
+           // background-color: red;
+          //  border-radius:0 0 20px 20px;
+        }
+        .list-md .item[no-lines], .list-md .item[no-lines] .item-inner {
+            border-width: 0;
+           // border-radius: 20px;
+        }
+        .list {
+            margin-bottom: 4px;
+        }
+        .toolbar-title-md{
+            color: white;
+            font-size: 2.2rem;
+                color: #ffffff;
+                display: inline;
+                padding-left: 10px;
+                padding-right: 8px;
+                padding-top: 0px;
+        }
+        .projectCardTitle{
+            color: darkolivegreen;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .missionCardDesc{
+            color: $cardfeedBackJenniferTextColor ;
+                font-size: 15px;
+                text-align: left;
+                margin: 0px;
+                color: darkgray;
+        }
+        .button-outline-md{
+            color: darkolivegreen;
+            border-color: darkolivegreen;
+            border-radius: 10px;
+        }
+    
+    }
+    

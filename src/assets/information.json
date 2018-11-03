@@ -1,0 +1,55 @@
+{
+    "items": [
+        {
+            "name": "Embedded",
+            "children": [
+                {
+                    "name": "Embedded",
+                    "information": "40 Hours, Fully on Hands on Training, Certificate and software issue",
+                    "price": "Apply"
+                }
+            ]
+        },
+        {
+            "name": "MATLAB Image Processing",
+            "children": [
+                {
+                    "name": "Image Processing",
+                    "information": "40 Hours, Fully on Hands on Training, Certificate and software issue",
+                    "price": "Apply"
+                }
+            ]
+        },
+        {
+            "name": "MATLAB Simulink",
+            "children": [
+                {
+                    "name": "Simulink",
+                    "information": "40 Hours, Fully on Hands on Training, Certificate and software issue",
+                    "price": "Apply"
+                }
+            ]
+        },
+        {
+            "name": "NS2",
+            "children": [
+                {
+                    "name": "NS2",
+                    "information": "40 Hours, Fully on Hands on Training, Certificate and software issue",
+                    "price": "Apply"
+                }
+            ]
+        },
+        {
+            "name": "OPEN CV",
+            "children": [
+                {
+                    "name": "OPEN CV",
+                    "information": "40 Hours, Fully on Hands on Training, Certificate and software issue",
+                    "price": "Apply"
+                }
+            ]
+        }
+        
+    ]
+}

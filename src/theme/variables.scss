@@ -41,6 +41,26 @@ $colors: (
   dark:       #222
 );
 
+//$Header_background_image :linear-gradient(90deg, #33959a, #339184, #368e66, #2b9054, #168e70, #247c81, #2d7387);
+//$Home_tab_color : linear-gradient(to bottom left, #00ffcc 35%, #0099cc 60%);
+
+ion-loading.transparent {
+  .loading-wrapper {
+    background: transparent;
+    box-shadow: none;
+    
+
+    .spinner-crescent circle {
+      stroke-width: 15px;
+      color : #32db64;
+      //size: 100px;
+    }
+    .loadingImage{
+      width: 50px;
+    }
+  }
+}
+
 
 // App iOS Variables
 // --------------------------------------------------

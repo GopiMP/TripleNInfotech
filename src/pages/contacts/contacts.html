@@ -1,18 +1,76 @@
-<!--
-  Generated template for the ContactsPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>contacts</ion-title>
+    <ion-buttons start>
+    <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button></ion-buttons>
+      <ion-title class="headerTitle">
+         Contacts
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only style="color: white;">
+              <ion-icon name="options"></ion-icon>
+            </button>
+          </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="background">
+
+  <ion-card>
+    <ion-card-header>Triple N Infotech - Chennai</ion-card-header>
+    <ion-card-content>
+        <img src="/assets/imgs/cmap.png">
+        <ion-fab top right>
+          <button ion-fab (click)="goToEvent()">
+            <ion-icon name="pin"></ion-icon>
+          </button>
+        </ion-fab>
+        New No 33, (Old no 14/1),
+First floor Madley Road (Near Madley Subway) T Nagar,
+Chennai-17
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="callToNumber(04442868371)">
+          <ion-icon name="call"></ion-icon>
+          <div>044-42868371</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="callToNumber(9566234284)">
+          <ion-icon name="phone-portrait"></ion-icon>
+          <div>9566234284</div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-card-header>Triple N Infotech - Trichy(Franchise)</ion-card-header>
+    <ion-card-content>
+        No.73/5, 3rd Floor, Opp City Hospital,
+Salai Road, Trichy-620 018
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="callToNumber(04314050403)">
+          <ion-icon name="call"></ion-icon>
+          <div>0431-4050403</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="callToNumber(7200021404)">
+          <ion-icon name="phone-portrait"></ion-icon>
+          <div>7200021404</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-item class="item item-icon-right" nav-clear menu-close ui-sref onclick="window.open('fb://page/620967164688741', '_system');" >
+    <i class="icon ion-social-facebook"></i>
+    <h2 class="menu-text">Facebook Page</h2>
+</ion-item>
 
 </ion-content>
+

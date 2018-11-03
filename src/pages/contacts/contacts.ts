@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
 
 /**
  * Generated class for the ContactsPage page.
@@ -14,12 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'contacts.html',
 })
 export class ContactsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactsPage');
-  }
-
+ 
+constructor(private call : CallNumber){}
+callToNumber(callNumber){
+  this.call.callNumber(callNumber, true)
+}
+goToEvent(){
+  console.log("map calling");
+}
 }

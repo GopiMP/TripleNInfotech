@@ -2,7 +2,7 @@ export default [
         {
             image : './assets/imgs/embedded.png',
             title : "embedded",
-            description : "microprocessor and microcontroller based projects"
+            description : "Microprocessor and Microcontroller based projects"
         },{
             image : "./assets/imgs/dsp.jpg",
             title : "dsp",
@@ -13,7 +13,7 @@ export default [
             description : "Basic and advanced"
         },{
             image : "./assets/imgs/dot1-icon.png",
-            title : "dot Net",
+            title : "dotNet",
             description : "Microsoft based projects"
         },{
             image : "./assets/imgs/NS.jpg",

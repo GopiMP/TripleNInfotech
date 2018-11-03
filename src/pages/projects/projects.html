@@ -1,20 +1,33 @@
+
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>projects</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+      <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button></ion-buttons>
+        <ion-title class="headerTitle">
+           Project
+          </ion-title>
+          <ion-buttons end>
+              <button ion-button icon-only style="color: white;">
+                <ion-icon name="options"></ion-icon>
+              </button>
+            </ion-buttons>
+      
+    </ion-navbar>
+  
+  </ion-header>
 
-</ion-header>
 
-
-<ion-content padding>
-  <ion-card *ngFor="let item of domainList">
+<ion-content class="background">
+  <ion-card *ngFor="let item of domainList" class="projectCard">
    <ion-item (click)="goToProjectList(item.title)">
      <ion-avatar item-start>
       <img src="{{item.image}}" alt="Image">
      </ion-avatar>
-     <h2>{{item.title}}</h2>
-     <p>{{item.description}}</p>
+     <h2 class="projectCardTitle">{{item.title | uppercase}}</h2>
+     <p class="missionCardDesc">{{item.description}}</p>
    </ion-item>
   </ion-card>
 </ion-content>

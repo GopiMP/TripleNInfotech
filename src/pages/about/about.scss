@@ -1,0 +1,96 @@
+@import '../../style/colors.scss';
+@import '../../fontgroup/fontStyle.scss';
+page-about {
+
+
+    #header {
+        //background-image: url('../assets/imgs/dashboard0.png')!important;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 24vh;
+        margin: -15px;
+      }
+      
+      ion-fab {
+        position: relative;
+      }
+      
+      ion-fab[bottom][edge] {
+        bottom: -38vh;
+      }
+      
+      .fab {
+        margin-right: 3vw;
+      }
+      ion-fab[right] {
+        
+        right: calc(-145px + env(safe-area-inset-right));
+    }
+    .title-image {
+        margin-top: 8px;
+        height: 27px;
+    }
+    .list-md {
+        margin: 20px 0 16px;
+    }
+   
+    .toolbar-title-md{
+        color: white;
+        font-size: 2.2rem;
+            color: #ffffff;
+           // font-family: $Bevanfontfamily;
+            display: inline;
+            padding-left: 10px;
+            padding-right: 8px;
+            padding-top: 0px;
+    }
+    .homeCard{
+        border-radius: 10px;
+        //background-image: linear-gradient(to top, #99ccff 0%, #00ffcc 100%);
+        //border-color: red;
+    }
+    .homelist{
+        border-radius: 10px;
+    }
+    .homeImage{
+        height: 100px;
+        padding: 10px;
+    }
+    .dashboardCard{
+        border-radius: 10px;
+        text-align: center;
+    }
+    .homeCardItem{
+        text-align: center;
+       // background-color:   
+    }
+    .card-md{
+        //background: #99ccff  
+    }
+    .galleryIcon{
+        height: 40px;
+        width: 40px;
+    }
+    .homeGrid{
+        padding: 0px;
+    }
+    .homeTitle{
+        color: darkgreen;
+        font-weight: 500;
+    }
+    .dashboardIcon{
+        color: steelblue;
+    }
+    
+}
+
+.toolbar-background {
+    background-color: #77a84b	
+}
+.headerTitle{
+    text-align: center;
+}
+.background {
+    background-color: #d7eab5
+}

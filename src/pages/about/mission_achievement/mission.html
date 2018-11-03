@@ -1,0 +1,53 @@
+      <ion-header>
+          <ion-navbar>
+            <ion-buttons start>
+            <button ion-button icon-only menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button></ion-buttons>
+              <ion-title class="headerTitle">
+                  Vision & Mission
+                </ion-title>
+                <ion-buttons end>
+                    <button ion-button icon-only (click)="onClose()" style="color: white;">
+                      <ion-icon name="close"></ion-icon>
+                    </button>
+                  </ion-buttons>
+            
+          </ion-navbar>
+        
+        </ion-header>
+      
+      <ion-content padding class="background">
+          <ion-card class="cardRadius">
+              <ion-card-header class="missionCardHeader">
+                GOAL
+              </ion-card-header>
+              <ion-card-content class="missionCardDesc">
+                  Our goal at Triple N Infotech is to provide effective solutions designed to boost your innovations, be it small or a large.
+              </ion-card-content>
+            </ion-card>
+            <ion-card class="cardRadius">
+                <ion-card-header class="missionCardHeader">
+                 Vision & Mission 
+                </ion-card-header>
+                <ion-card-content class="missionCardDesc">
+                    Our efforts are aimed towards showcasing new technologies. We are highly engaged to provide hands-on experience to the students we invite them from the stream of Electronics, Instrumentation, Computer Science & Information Science to carry out their academic project work at our facility under the guidance of industry experts.
+                </ion-card-content>
+              </ion-card>
+              <ion-card class="cardRadius">
+                  <ion-card-header class="missionCardHeader">
+                      PROJECTS
+                  </ion-card-header>
+                  <ion-card-content class="missionCardDesc">
+                      The company Helping final year students for their IEEE projects to pursue a successful career in the demanding IT industry.
+                  </ion-card-content>
+                </ion-card>
+         
+          
+       </ion-content>
+
+       <ion-footer>
+          <ion-toolbar>
+            <ion-title class="headerTitle" (click)="onClose()">Close</ion-title>
+          </ion-toolbar>
+        </ion-footer>

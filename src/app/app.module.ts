@@ -12,6 +12,13 @@ import { TrainingPage } from '../pages/training/training';
 import { ContactsPage } from '../pages/contacts/contacts';
 import { ProjectListPage } from '../pages/project-list/project-list';
 import { MailPage } from '../pages/mail/mail';
+import { EmailComposer } from '@ionic-native/email-composer';
+import { HttpModule } from '@angular/http';
+import { CallNumber } from '@ionic-native/call-number';
+import { AboutPage } from '../pages/about/about';
+import { GalleryPage } from '../pages/gallery/gallery';
+import { MissionPage } from '../pages/about/mission_achievement/mission';
+import { AchievementPage } from '../pages/about/achievement/achievement';
 
 @NgModule({
   declarations: [
@@ -22,11 +29,16 @@ import { MailPage } from '../pages/mail/mail';
     TrainingPage,
     ContactsPage,
     ProjectListPage,
-    MailPage
+    MailPage,
+    AboutPage,
+    GalleryPage,
+    MissionPage,
+    AchievementPage
 
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
@@ -39,11 +51,17 @@ import { MailPage } from '../pages/mail/mail';
     TrainingPage,
     ContactsPage,
     ProjectListPage,
-    MailPage
+    MailPage,
+    AboutPage,
+    GalleryPage,
+    MissionPage,
+    AchievementPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    EmailComposer,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     
   ]

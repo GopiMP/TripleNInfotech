@@ -1,12 +1,12 @@
 
 
-<ion-content padding>
-  <ion-slides pager paginationType="progress" (ionSlideDidChange)="slideChanged()">
+<ion-content padding class="background">
+  <ion-slides pager paginationType="bullets" (ionSlideDidChange)="slideChanged()">
     <ion-slide *ngFor="let item of onBoardingContent">
-      <h1>{{item.title}}</h1>
-      <span>{{item.description}}</span>
+      <h4 class="onBoardHeader"><u>{{item.title}}</u></h4>
+      <span class='onBoardDesc'>{{item.description}}</span>
       <img src="{{item.image}}" alt="image">
-      <button ion-button (click)="goToNext()">{{item.button}}</button>
+      <button class="onBoardBtn" round  ion-button (click)="goToNext()">{{item.button}}</button>
     </ion-slide>
   </ion-slides>
 </ion-content>
