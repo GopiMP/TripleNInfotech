@@ -3,15 +3,15 @@
 
   <ion-navbar>
     <ion-buttons start>
-    <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
+    <button ion-button icon-only  style="color: white;">
+        <ion-icon class="headerIcon" name="ios-home"></ion-icon>
       </button></ion-buttons>
       <ion-title class="headerTitle">
           Triple N Infotech
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only  style="color: white;">
-              <ion-icon name="options"></ion-icon>
+            <button ion-button icon-only (click)="presentPopover($event)"  style="color: white;">
+              <ion-icon name="md-more"></ion-icon>
             </button>
           </ion-buttons>
     
@@ -20,8 +20,8 @@
 </ion-header>
 
 
-<ion-content padding class="background">
-      <div id="header">
+<ion-content  class="background">
+      <div ion-fixed id="header">
           <ion-slides pager paginationType="progress" autoplay="2000" loop="true">
               <ion-slide >
                 <img src="../assets/imgs/dashboard0.png" alt="image">
@@ -34,7 +34,7 @@
               </ion-slide>
         </ion-slides>
       </div>
-      <ion-list>
+      <!-- <ion-list>
           <ion-item class="homelist" style="margin-bottom: 10px;" (click)="onVission()">
             <ion-avatar item-start>
               <img src="../assets/imgs/goal.png">
@@ -49,43 +49,62 @@
               <h2 class="homeTitle">Achievement</h2>
               <ion-icon item-end name="ios-arrow-forward"></ion-icon>
             </ion-item>
-        </ion-list>
+        </ion-list> -->
+       
           <ion-grid class="homeGrid">
+              <ion-row>
+                  <ion-col>
+                    <!-- <ion-card class="dashboardCard"> -->
+                      <button ion-item (click)="onVission()"  class="homeCardItem" >
+                      <h1 orange><ion-icon class="dashboardIcon" name=""><img class="dashboardImg" src="../assets/imgs/goal.png"></ion-icon></h1>
+                      <p class="homeTitle">Vision & Mission</p>
+                      </button>
+                    <!-- </ion-card> -->
+                  </ion-col>
+                  <ion-col>
+                    <!-- <ion-card class="dashboardCard"> -->
+                      <button ion-item (click)="onAchievement()" class="homeCardItem">
+                      <h1 grey><ion-icon  class="dashboardIcon" name=""><img class="dashboardImg" src="../assets/imgs/award.png"></ion-icon></h1>
+                      <p class="homeTitle">Achievement</p>
+                      </button>
+                    <!-- </ion-card> -->
+                  </ion-col>
+                </ion-row>
             <ion-row>
               <ion-col>
-                <ion-card class="dashboardCard">
+                <!-- <ion-card class="dashboardCard"> -->
                   <button ion-item (click)="goToNext('gallery')"  class="homeCardItem" >
-                  <h1 orange><ion-icon class="dashboardIcon" name="images"></ion-icon></h1>
+                  <h1 orange><ion-icon class="dashboardIcon" name=""><img class="dashboardImg" src="../assets/imgs/gallery.png"></ion-icon></h1>
                   <p class="homeTitle">Gallery</p>
                   </button>
-                </ion-card>
+                <!-- </ion-card> -->
               </ion-col>
               <ion-col>
-                <ion-card class="dashboardCard">
+                <!-- <ion-card class="dashboardCard"> -->
                   <button ion-item (click)="goToNext('project')" class="homeCardItem">
-                  <h1 grey><ion-icon  class="dashboardIcon" name="ios-bulb"></ion-icon></h1>
+                  <h1 grey><ion-icon  class="dashboardIcon" name=""><img class="dashboardImg" src="../assets/imgs/project.png"></ion-icon></h1>
                   <p class="homeTitle">Projects</p>
                   </button>
-                </ion-card>
+                <!-- </ion-card> -->
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col>
-                <ion-card class="dashboardCard">
+                <!-- <ion-card class="dashboardCard"> -->
                     <button ion-item (click)="goToNext('training')" class="homeCardItem">
-                  <h1 green><ion-icon  class="dashboardIcon" name="ios-people"></ion-icon></h1>
+                  <h1 green><ion-icon  class="dashboardIcon" name=""><img class="dashboardImg" src="../assets/imgs/training2.png"></ion-icon></h1>
                   <p class="homeTitle">Training</p>
                   </button>
-                </ion-card>
+                <!-- </ion-card> -->
               </ion-col>
       
               <ion-col>
-                <ion-card class="dashboardCard">
+                <!-- <ion-card class="dashboardCard"> -->
                     <button ion-item (click)="goToNext('contact')" class="homeCardItem">
-                  <h1 green><ion-icon  class="dashboardIcon" name="md-locate"></ion-icon></h1>
+                  <h1 green><ion-icon  class="dashboardIcon" name=""><img class="dashboardImg" src="../assets/imgs/contact.png"></ion-icon></h1>
                   <p class="homeTitle">Contact</p>
                   </button>
-                </ion-card>
+                <!-- </ion-card> -->
               </ion-col>
             </ion-row>
           </ion-grid>

@@ -1,3 +1,5 @@
+@import '../../style/colors.scss';
+@import '../../fontgroup/fontStyle.scss';
 page-contacts {
     .toolbar-title-md{
         color: white;
@@ -8,5 +10,96 @@ page-contacts {
             padding-right: 8px;
             padding-top: 0px;
     }
+    // .middleCenter{
+    //     vertical-align: middle;
+    //     height: 100%;
+    //     display: block;
+        
+    // }
+    .contactCard{
+        border-radius: 10px;
+    }
+    .projectCardTitle{
+        color: darkolivegreen;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .missionCardDesc{
+        color: $cardfeedBackJenniferTextColor ;
+            font-size: 15px;
+            text-align: left;
+            margin: 0px;
+    }
+    .landline{
+       // float: right;
+      //  width: 30px;
+        margin-top: -5px;
+        margin-right: 5%;
+        font-size: 25px !important;
+        color: seagreen;
+    }
+    .mobile{
+       // float: right;
+        margin-right: 6%;
+       // width: 28px;
+        margin-top: -5px;
+        font-size: 25px !important;
+        color: seagreen;
+    }
+    hr{
+        width: 90%;
+       // background-color: lightgray !important; 
+    }
+    .contactimg{
+        width: 80%;
+        height: 100%;
+    }
+    .imgCenter{
+        text-align: center !important;
+    }
+    .location{
+        //float: right;
+        //margin-right: 10%;
+       // width: 30px;
+        margin-top: -5px;
+        font-size: 25px !important;
+        color: seagreen;
 
+    }
+    .socialHand{
+        float: right;
+        width: 40px;
+        margin-top: -10px;
+       // margin-right: 5%;
+    }
+    .rowContact{
+        margin-top: -5%
+    }
+   .mariLogo{
+       width: 25%;
+   }
+   .logoFooter{
+    text-align: center;
+    }
+    .footerCardDesc{
+        color: $cardfeedBackJenniferTextColor ;
+            font-size: 12px;
+            text-align: left;
+            margin: 0px;
+            color: #97b4c5;
+    }
+    .ionFooter{
+        .toolback{
+            background-color: transparent;
+        }
+        .toolbar-background{
+            background-color: transparent;
+        }
+    }
+    
+}
+
+.alert-md .alert-wrapper {
+    border-radius: 20px !important;
+    color: darkolivegreen;
 }

@@ -43,6 +43,13 @@ $colors: (
 
 //$Header_background_image :linear-gradient(90deg, #33959a, #339184, #368e66, #2b9054, #168e70, #247c81, #2d7387);
 //$Home_tab_color : linear-gradient(to bottom left, #00ffcc 35%, #0099cc 60%);
+$popover-md-width: 150px; $popover-ios-width: 150px; $popover-wp-width: 150px;
+//$popover-ios-background : red; $popover-md-background : red; $popover-wp-background : red; 
+$popover-ios-border-radius : 20px;$popover-md-border-radius : 20px;$popover-wp-border-radius : 20px;
+//$popover-md-text-color : red;$popover-wp-text-color : red;$popover-ios-text-color : red;
+//$text-md-color: blue;
+//$popover-md-background : red;
+
 
 ion-loading.transparent {
   .loading-wrapper {

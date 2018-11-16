@@ -8,7 +8,7 @@
         }
         .section {
             background: #fff;
-            color: #000;
+            color: darkolivegreen;
             margin-bottom: 4px;
             border-radius: 10px;
         }
@@ -78,6 +78,8 @@
             bottom: 0px;
             margin-left: auto;
             z-index: 9;
+            fill: lightgreen;
+            stroke: lightgreen;
         }
     
     }

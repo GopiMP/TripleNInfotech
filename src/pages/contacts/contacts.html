@@ -2,75 +2,139 @@
 <ion-header>
   <ion-navbar>
     <ion-buttons start>
-    <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button></ion-buttons>
+      <button ion-button icon-only  style="color: white;">
+          <ion-icon class="headerIcon" name="ios-locate"></ion-icon>
+        </button></ion-buttons>
       <ion-title class="headerTitle">
          Contacts
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only style="color: white;">
-              <ion-icon name="options"></ion-icon>
-            </button>
-          </ion-buttons>
+          <button ion-button icon-only (click)="presentPopover($event)"  style="color: white;">
+            <ion-icon name="md-more"></ion-icon>
+          </button>
+        </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding class="background">
+<ion-content class="background">
 
-  <ion-card>
-    <ion-card-header>Triple N Infotech - Chennai</ion-card-header>
-    <ion-card-content>
-        <img src="/assets/imgs/cmap.png">
-        <ion-fab top right>
-          <button ion-fab (click)="goToEvent()">
-            <ion-icon name="pin"></ion-icon>
-          </button>
-        </ion-fab>
+  <ion-card class="contactCard">
+    <ion-card-header class="projectCardTitle">
+      Triple N Infotech- Chennai
+      <!-- <ion-icon class="location" (click)="openMap('chennai')" name="md-pin"></ion-icon>
+      <ion-icon class="landline" (click)="callToNumber('04442868371')" name="ios-call"></ion-icon>
+      <ion-icon class="mobile" (click)="callToNumber(9566234284)" name="md-phone-portrait"></ion-icon> -->
+      <!-- <img class="location" (click)="openMap('chennai')" src="../assets/imgs/location7.png" alt="mobile">
+      <img class="landline" (click)="callToNumber(04442868371)"  src="../assets/imgs/landline7.png" alt="landline">
+      <img class="mobile" (click)="callToNumber(9566234284)" src="../assets/imgs/mobile6.png" alt="mobile"> -->
+    </ion-card-header>
+    <ion-card-content class="missionCardDesc">
         New No 33, (Old no 14/1),
-First floor Madley Road (Near Madley Subway) T Nagar,
-Chennai-17
+1'st floor Madley Road (Near Madley Subway) T Nagar,
+Chennai.
     </ion-card-content>
     <ion-row>
-      <ion-col>
-        <button ion-button icon-start clear small (click)="callToNumber(04442868371)">
-          <ion-icon name="call"></ion-icon>
-          <div>044-42868371</div>
-        </button>
+      <ion-col class="logoFooter" (click)="openMap('chennai')">
+        <ion-icon class="location"  name="md-pin"></ion-icon>
+        <p>Location</p>
       </ion-col>
-      <ion-col>
-        <button ion-button icon-start clear small (click)="callToNumber(9566234284)">
-          <ion-icon name="phone-portrait"></ion-icon>
-          <div>9566234284</div>
-        </button>
+      <ion-col class="logoFooter" (click)="callToNumber('04442868371')">
+        <ion-icon class="landline"  name="ios-call"></ion-icon>
+        <p>Landline</p>
+      </ion-col>
+      <ion-col class="logoFooter" (click)="callToNumber(9566234284)">
+        <ion-icon class="mobile"  name="md-phone-portrait"></ion-icon>
+        <p>Mobile</p>
       </ion-col>
     </ion-row>
-    <ion-card-header>Triple N Infotech - Trichy(Franchise)</ion-card-header>
-    <ion-card-content>
+  </ion-card >
+  <ion-card class="contactCard">
+    <ion-card-header class="projectCardTitle">Triple N Infotech- Trichy
+      <!-- <ion-icon class="location" (click)="openMap('trichy')" name="md-pin"></ion-icon>
+      <ion-icon class="landline" (click)="callToNumber('04314050403')" name="ios-call"></ion-icon>
+      <ion-icon class="mobile" (click)="callToNumber(7200021404)" name="md-phone-portrait"></ion-icon> -->
+      <!-- <img class="location" (click)="openMap('trichy')" src="../assets/imgs/location3.png" alt="mobile">
+      <img class="landline" (click)="callToNumber(04314050403)"  src="../assets/imgs/mobile4.png" alt="landline">
+      <img class="mobile" (click)="callToNumber(7200021404)" src="../assets/imgs/mobile5.png" alt="mobile"> -->
+    </ion-card-header>
+    <ion-card-content class="missionCardDesc">
         No.73/5, 3rd Floor, Opp City Hospital,
 Salai Road, Trichy-620 018
     </ion-card-content>
     <ion-row>
-      <ion-col>
-        <button ion-button icon-start clear small (click)="callToNumber(04314050403)">
-          <ion-icon name="call"></ion-icon>
-          <div>0431-4050403</div>
-        </button>
+      <ion-col class="logoFooter"  (click)="openMap('trichy')">
+        <ion-icon class="location" name="md-pin"></ion-icon>
+        <p>Location</p>
       </ion-col>
-      <ion-col>
-        <button ion-button icon-start clear small (click)="callToNumber(7200021404)">
-          <ion-icon name="phone-portrait"></ion-icon>
-          <div>7200021404</div>
-        </button>
+      <ion-col class="logoFooter" (click)="callToNumber('04314050403')">
+        <ion-icon class="landline"  name="ios-call"></ion-icon>
+        <p>Landline</p>
+      </ion-col>
+      <ion-col class="logoFooter" (click)="callToNumber(7200021404)">
+        <ion-icon class="mobile"  name="md-phone-portrait"></ion-icon>
+        <p>Mobile</p>
       </ion-col>
     </ion-row>
   </ion-card>
 
-  <ion-item class="item item-icon-right" nav-clear menu-close ui-sref onclick="window.open('fb://page/620967164688741', '_system');" >
+  <!-- <ion-item class="item item-icon-right" nav-clear menu-close ui-sref onclick="window.open('fb://page/620967164688741', '_system');" >
     <i class="icon ion-social-facebook"></i>
     <h2 class="menu-text">Facebook Page</h2>
-</ion-item>
+</ion-item> -->
 
+<!-- <a href="https://www.facebook.com/tripleninfotechieeeprojects/" onclick="$window.open('fb://profile/1471951636350492', '_system', 'location=no');" >Facebook</a>
+<a class="item" href="#" onclick="window.open('http://www.twitter.com/TripleNInfotech', '_system', 'location=yes'); return false;">
+  Twitter Client 
+</a>
+<a class="item" href="#" onclick="window.open('https://plus.google.com/111586883776688283498', '_system', 'location=yes'); return false;">
+  Open a Google+ Client or Browser
+</a> -->
+<ion-card class="contactCard">
+    <ion-card-header class="projectCardTitle">
+  Social Connection
+      <!-- <img class="socialHand"  src="../assets/imgs/hand4.png" alt="mobile"> -->
+    </ion-card-header>
+<ion-row class="rowContact">
+  <ion-col class="imgCenter">
+      <a href="https://www.facebook.com/tripleninfotechieeeprojects/" onclick="$window.open('fb://profile/1471951636350492', '_system', 'location=no');" ><img class="contactimg" src="../assets/imgs/fb2.png" alt="mobile"></a>
+  </ion-col>
+  <ion-col class="imgCenter">
+    <img class="contactimg" onclick="window.open('http://www.twitter.com/TripleNInfotech', '_system', 'location=yes'); return false;" src="../assets/imgs/twiter.png" alt="mobile">
+  </ion-col>
+  <ion-col class="imgCenter">
+    <img class="contactimg" onclick="window.open('https://plus.google.com/111586883776688283498', '_system', 'location=yes'); return false;" src="../assets/imgs/google.png" alt="mobile"> 
+  </ion-col>
+  <ion-col class="imgCenter">
+    <img class="contactimg" (click)="openMail()" src="../assets/imgs/mail.png" alt="mobile">
+  </ion-col>
+</ion-row>
+</ion-card>
+<!-- <ion-row>
+  <ion-col style="text-align:center">
+      Developed By
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="text-align:center">
+        Mari Software Solution
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align:center">
+        <img class="mariLogo"  src="../assets/imgs/mari1.png" alt="Mari">
+      </ion-col>
+      </ion-row> -->
 </ion-content>
 
+
+<!-- <ion-footer class="ionFooter" no-border> 
+    <ion-toolbar class="toolback">
+      <ion-title class="logoFooter" (click)="onClose()">
+        <p style="margin-bottom: -3%;"><img class="mariLogo"  src="../assets/imgs/mari1.png" alt="Mari"></p>
+        <span class="footerCardDesc"> Developed By@ Mari Software Solution</span>
+        </ion-title>
+    </ion-toolbar>
+  </ion-footer> -->
+
+ 

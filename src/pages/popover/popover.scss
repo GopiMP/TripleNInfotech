@@ -1,0 +1,25 @@
+@import '../../style/colors.scss';
+@import '../../fontgroup/fontStyle.scss';
+page-popover {
+    .popHeader{
+        
+            color: darkolivegreen;
+            font-weight: 600;
+            margin-bottom: 0px;
+        
+    }
+    .itemList{
+        color: red;
+    }
+    .missionCardDesc{
+        color: $cardfeedBackJenniferTextColor ;
+            font-size: 15px;
+            text-align: left;
+            margin: 0px;
+    }
+    .powerBtn{
+        float: right;
+        color: red;
+    }
+
+}

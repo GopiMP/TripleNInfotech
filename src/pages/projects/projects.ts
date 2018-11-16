@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, PopoverController } from 'ionic-angular';
 import domainContent from '../../data/domainContent';
 import { ProjectListPage } from '../project-list/project-list';
+import { PopoverPage } from '../popover/popover';
 
 
 @IonicPage()
@@ -12,7 +13,10 @@ import { ProjectListPage } from '../project-list/project-list';
 export class ProjectsPage implements OnInit {
   
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private loadingCtrl : LoadingController) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              private loadingCtrl : LoadingController,
+              private popoverCtrl : PopoverController) {
   }
 
   domainList :{image:string, title:string, description: string}[]
@@ -36,6 +40,12 @@ export class ProjectsPage implements OnInit {
     setTimeout(() => {
       loading.dismiss();
     }, 800);
+  }
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverPage, {}, {cssClass: 'contact-popover'});
+    popover.present({
+      ev: myEvent
+    });
   }
 
 }

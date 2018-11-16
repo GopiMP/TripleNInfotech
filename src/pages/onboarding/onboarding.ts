@@ -26,7 +26,7 @@ export class OnboardingPage implements OnInit {
     this.slides.slideTo(curIndex+1);
     if(this.slides.length() === curIndex+1){
        this.navCtrl.setRoot(HomePage);
-       this.navCtrl.push(HomePage);
+      // this.navCtrl.push(HomePage);
     }
   }
 

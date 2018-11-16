@@ -2,17 +2,17 @@
 <ion-header>
   <ion-navbar>
     <ion-buttons start>
-    <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button></ion-buttons>
+      <button ion-button icon-only  style="color: white;">
+          <ion-icon class="headerIcon" name="ios-people"></ion-icon>
+        </button></ion-buttons>
       <ion-title class="headerTitle">
          Training
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only style="color: white;">
-              <ion-icon name="options"></ion-icon>
-            </button>
-          </ion-buttons>
+          <button ion-button icon-only (click)="presentPopover($event)"  style="color: white;">
+            <ion-icon name="md-more"></ion-icon>
+          </button>
+        </ion-buttons>
   </ion-navbar>
 </ion-header>
  

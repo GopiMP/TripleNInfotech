@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, ModalController, LoadingController, Navbar, PopoverController } from 'ionic-angular';
 import embeddedContent from '../../data/embeddedContent';
 import { LowerCasePipe } from '@angular/common';
 import { MailPage } from '../mail/mail';
 import { Http } from '@angular/http';
+import { PopoverPage } from '../popover/popover';
 
 
 
@@ -21,7 +22,8 @@ export class ProjectListPage implements OnInit {
     private navParams: NavParams, 
     private http: Http,
     private modalCtrl : ModalController,
-    private loadingCtrl : LoadingController) {
+    private loadingCtrl : LoadingController,
+    private popoverCtrl : PopoverController) {
   }
 
   projectList : {title : string, id : string}[];
@@ -35,9 +37,18 @@ export class ProjectListPage implements OnInit {
         this.projectlist = data[this.navParams.get('project')];
       })
   }
+  // ionViewWillEnter(){
+  //   this.navbar.setBackButtonText('home')
+  // }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProjectListPage');
+  }
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverPage, {}, {cssClass: 'contact-popover'});
+    popover.present({
+      ev: myEvent
+    });
   }
   gotoMail(item){
     const loading = this.loadingCtrl.create({

@@ -1,9 +1,9 @@
 <ion-header>
   <ion-navbar>
     <ion-buttons start>
-    <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button></ion-buttons>
+      <button ion-button icon-only  style="color: white;">
+          <ion-icon class="headerIcon" name="ios-mail"></ion-icon>
+        </button></ion-buttons>
       <ion-title class="headerTitle">
           Project Request
         </ion-title>
@@ -16,57 +16,57 @@
 </ion-header>
 
 
-<ion-content padding class="background">
+<ion-content class="background">
   <form #f="ngForm" (ngSubmit)="onSendMail(f)">
     <ion-card class="projectCard">
     <ion-list>
       <ion-item>
-        <ion-label fixed>Name</ion-label>
+        <ion-label class="mailLabelText" fixed>Name</ion-label>
         <ion-input 
         type="text"
         name="name"
         placeholder="name"
-        ngModel
-        required>:</ion-input>
+        [(ngModel)]="name"
+        required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label fixed>E-mail</ion-label>
+        <ion-label class="mailLabelText" fixed>E-mail</ion-label>
         <ion-input 
         type="email"
         name="email"
         placeholder="E-mail"
-        ngModel
+        [(ngModel)]="email"
         required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label fixed>Contact No</ion-label>
+        <ion-label class="mailLabelText" fixed>Contact No</ion-label>
         <ion-input 
         type="number"
         name="contactNo"
         placeholder="Mobile"
         maxlength="10"
         minlength="10"
-        ngModel
+        [(ngModel)]="contactNo"
         required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label fixed>City</ion-label>
+        <ion-label class="mailLabelText" fixed>City</ion-label>
         <ion-input 
         type="text"
         name="city"
         placeholder="City"
-        ngModel
+        [(ngModel)]="city"
         required></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label fixed>Project </ion-label>
+        <ion-label class="mailLabelText" fixed>Project </ion-label>
         <ion-textarea  
         name="projectTitle"
         [(ngModel)]="projectType.title"
         ></ion-textarea>
       </ion-item>
       <ion-item>
-        <ion-label fixed>Project ID</ion-label>
+        <ion-label class="mailLabelText" fixed>Project ID</ion-label>
         <ion-input 
         type="text"
         name="projectId"
@@ -76,8 +76,9 @@
   </ion-card>
     <button
     ion-button
-    block
+    outline
     round
+    class="danger"
     class="mailBtn"
     type="submit"
     [disabled]="!f.valid">Send Mail</button>

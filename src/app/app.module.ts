@@ -12,13 +12,18 @@ import { TrainingPage } from '../pages/training/training';
 import { ContactsPage } from '../pages/contacts/contacts';
 import { ProjectListPage } from '../pages/project-list/project-list';
 import { MailPage } from '../pages/mail/mail';
+import { Network } from '@ionic-native/network';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { HttpModule } from '@angular/http';
 import { CallNumber } from '@ionic-native/call-number';
 import { AboutPage } from '../pages/about/about';
+//import {PopoverPage} from '../pages/popover/popover';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { MissionPage } from '../pages/about/mission_achievement/mission';
 import { AchievementPage } from '../pages/about/achievement/achievement';
+import { Toast } from '@ionic-native/toast';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+import { PopoverPage } from '../pages/popover/popover';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,8 @@ import { AchievementPage } from '../pages/about/achievement/achievement';
     AboutPage,
     GalleryPage,
     MissionPage,
-    AchievementPage
+    AchievementPage,
+    PopoverPage
 
   ],
   imports: [
@@ -55,13 +61,18 @@ import { AchievementPage } from '../pages/about/achievement/achievement';
     AboutPage,
     GalleryPage,
     MissionPage,
-    AchievementPage
+    AchievementPage,
+    PopoverPage
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     EmailComposer,
     CallNumber,
+    LaunchNavigator,
+    Network,
+    Toast,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     
   ]

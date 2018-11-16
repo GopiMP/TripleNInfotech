@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, Tabs, ModalController, ViewController, LoadingController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Tabs, ModalController, ViewController, LoadingController, PopoverController  } from 'ionic-angular';
 import { GalleryPage } from '../gallery/gallery';
 import { ViewContainerData } from '@angular/core/src/view';
 import { MissionPage } from './mission_achievement/mission';
 import { AchievementPage } from './achievement/achievement';
+import { PopoverPage } from '../popover/popover';
 
 
 
@@ -21,7 +22,8 @@ export class AboutPage {
               public navParams: NavParams, 
               private modelCtrl : ModalController,
               private viewCtrl : ViewController,
-              private loadingCtrl : LoadingController) {
+              private loadingCtrl : LoadingController,
+              private popoverCtrl: PopoverController) {
     this.tab = this.navCtrl.parent;
   }
 
@@ -62,5 +64,22 @@ export class AboutPage {
     const modal = this.modelCtrl.create(AchievementPage);
     modal.present();
   }
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverPage, {}, {cssClass: 'contact-popover'});
+    popover.present({
+      ev: myEvent
+    });
+  }
+  // onShowOptions(event: MouseEvent){
+  //   const popOver = this.popoverCtrl.create(SLOptionsPage);
+  //   popOver.present({ev: event});
+  //   popOver.onDidDismiss(
+  //     data => {
+  //       if(data.action == 'load'){
+  //         console.log("exit calling")
+  //       }
+  //     }
+  //   );
+  // }
 
 }

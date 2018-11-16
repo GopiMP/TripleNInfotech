@@ -15,7 +15,25 @@ page-mail {
     }
     .mailBtn{
         margin-top: 20px;
-        height: 50px;
+        height: 40px;
+        width: 50%;
+        font-weight: 500;
+        border-color: darkolivegreen;
+        color: darkolivegreen;
+        background-color: white;
+    }
+    // .toast{
+    //     background-color: red;
+    // }
+    .mailLabelText{
+        color: darkolivegreen !important;
+        font-weight: 500
+    }
+    .text-input-md{
+        color: cadetblue
+    }
+    form{
+        text-align: center;
     }
 
 }

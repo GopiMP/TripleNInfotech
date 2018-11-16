@@ -1,16 +1,35 @@
 @import '../../style/colors.scss';
 @import '../../fontgroup/fontStyle.scss';
 page-about {
-
-
+    .scroll-content{
+        margin-top: 270px !important;
+    }
+    .item-md.activated{
+        background-color: #b7cd90  ; 
+        .homeTitle{
+            color: white;
+            //font-family: "Comic Sans MS", Times, serif;
+            font-weight: 500;
+        }
+    }
     #header {
         //background-image: url('../assets/imgs/dashboard0.png')!important;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        height: 24vh;
-        margin: -15px;
+       // height: 24vh;
+       // margin: -15px;
       }
+      .swiper-slide img {
+        width: auto;
+        max-width: 100%;
+        height: 200px;
+        max-height: 100%;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 0px solid #dedede;
+    }
       
       ion-fab {
         position: relative;
@@ -31,8 +50,8 @@ page-about {
         margin-top: 8px;
         height: 27px;
     }
-    .list-md {
-        margin: 20px 0 16px;
+    .gridtop {
+        margin-top:-10px;
     }
    
     .toolbar-title-md{
@@ -61,6 +80,9 @@ page-about {
         border-radius: 10px;
         text-align: center;
     }
+    .dashboardImg{
+        width: 50%;
+    }
     .homeCardItem{
         text-align: center;
        // background-color:   
@@ -73,11 +95,13 @@ page-about {
         width: 40px;
     }
     .homeGrid{
-        padding: 0px;
+        margin-top:-10px;
+       // padding: 0px;
     }
     .homeTitle{
         color: darkgreen;
         font-weight: 500;
+       // font-family: "Comic Sans MS", Times, serif;
     }
     .dashboardIcon{
         color: steelblue;
@@ -93,4 +117,11 @@ page-about {
 }
 .background {
     background-color: #d7eab5
+}
+.headerIcon{
+    font-size: 35px !important;
+    margin-left: 10px;
+}
+ion-buttons[start] {
+    order: 1;
 }
