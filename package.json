@@ -24,12 +24,14 @@
     "@ionic-native/core": "~4.15.0",
     "@ionic-native/email-composer": "^4.16.0",
     "@ionic-native/launch-navigator": "^4.17.0",
+    "@ionic-native/native-page-transitions": "^4.17.0",
     "@ionic-native/network": "^4.17.0",
     "@ionic-native/splash-screen": "~4.15.0",
     "@ionic-native/status-bar": "^4.15.0",
     "@ionic-native/toast": "^4.17.0",
     "@ionic/storage": "2.2.0",
     "call-number": "^1.0.1",
+    "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "7.0.0",
     "cordova-plugin-actionsheet": "^2.3.3",
     "cordova-plugin-device": "^2.0.2",
@@ -47,7 +49,8 @@
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "uk.co.workingedge.phonegap.plugin.launchnavigator": "^4.2.2",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "mx.ferreyra.callnumber": "~0.0.2"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.0",
@@ -70,7 +73,8 @@
       "cordova-plugin-x-toast": {},
       "uk.co.workingedge.phonegap.plugin.launchnavigator": {
         "OKHTTP_VERSION": "3.+"
-      }
+      },
+      "com.telerik.plugins.nativepagetransitions": {}
     },
     "platforms": [
       "android"

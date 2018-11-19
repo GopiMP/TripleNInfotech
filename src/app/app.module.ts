@@ -22,6 +22,7 @@ import { GalleryPage } from '../pages/gallery/gallery';
 import { MissionPage } from '../pages/about/mission_achievement/mission';
 import { AchievementPage } from '../pages/about/achievement/achievement';
 import { Toast } from '@ionic-native/toast';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 import { PopoverPage } from '../pages/popover/popover';
 
@@ -72,6 +73,7 @@ import { PopoverPage } from '../pages/popover/popover';
     CallNumber,
     LaunchNavigator,
     Network,
+    NativePageTransitions,
     Toast,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     

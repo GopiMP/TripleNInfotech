@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, PopoverControll
 import domainContent from '../../data/domainContent';
 import { ProjectListPage } from '../project-list/project-list';
 import { PopoverPage } from '../popover/popover';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 
 @IonicPage()
@@ -16,6 +17,7 @@ export class ProjectsPage implements OnInit {
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
               private loadingCtrl : LoadingController,
+              private nativePageTransitions : NativePageTransitions,
               private popoverCtrl : PopoverController) {
   }
 
@@ -27,6 +29,7 @@ export class ProjectsPage implements OnInit {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProjectsPage');
   }
+
   goToProjectList(selectedProject){
     const loading = this.loadingCtrl.create({
       spinner: 'hide',
