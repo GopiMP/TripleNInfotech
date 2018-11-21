@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Platform, AlertController } from 'ionic-angular';
 import { GalleryPage } from '../gallery/gallery';
 import { AchievementPage } from '../about/achievement/achievement';
 
@@ -28,6 +28,7 @@ export class PopoverPage {
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
               private modelCtrl : ModalController,
+              private alertCtrl : AlertController,
               private platform : Platform) {
   }
 
@@ -43,7 +44,28 @@ export class PopoverPage {
     modal.present();
   }
   goToOut(){
-    console.log("going to out from app");
-    this.platform.exitApp();
+    let alert = this.alertCtrl.create({
+      title: "Exit Triple N",
+      message: "Are you sure, You want to exit from Triple N ?",
+      buttons :[
+        {
+          text: 'No',
+          role: 'No',
+          cssClass: 'alertDanger',
+          handler : () => {
+            console.log("Clicked No")
+          }
+        },
+        {
+          text: 'Yes',
+          cssClass: 'alertDanger',
+          handler : () => {
+            console.log("going to out from app");
+            this.platform.exitApp();
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 }

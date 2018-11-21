@@ -19,6 +19,7 @@ export class MailPage implements OnInit {
   contactNo : string;
   email : string;
   city : string;
+  isDisabled: boolean = true;
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
