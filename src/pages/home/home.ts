@@ -24,7 +24,6 @@ export class HomePage {
   constructor(public navCtrl: NavController, private storage : Storage) {
   }
 
-
   ionViewWillEnter(){
     this.storage.get('intro-done').then(done =>{
       if(!done){

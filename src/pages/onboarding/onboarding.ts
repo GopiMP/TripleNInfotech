@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
 })
 export class OnboardingPage implements OnInit {
 
-  constructor(private navCtrl : NavController){}
+  constructor(private navCtrl : NavController, private storage : Storage){}
 
   @ViewChild(Slides) slides: Slides;
   onBoardingContent : {title : string, description: string, image : string, button : string}[]
@@ -25,6 +25,7 @@ export class OnboardingPage implements OnInit {
     let curIndex = this.slides.getActiveIndex();
     this.slides.slideTo(curIndex+1);
     if(this.slides.length() === curIndex+1){
+      //this.storage.set('intro-done', true);
        this.navCtrl.setRoot(HomePage);
       // this.navCtrl.push(HomePage);
     }
